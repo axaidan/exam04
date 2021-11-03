@@ -13,9 +13,9 @@ int main(int ac, char *av[], char *ep[])
 	{
 		start = i;
 		if (is_pipeline(av, &i))
-			exec_pipeline(av, start, i, &i);
+			pipeline_cmd(av, start, i, &i, ep);
 		else
-			exec_simple(av, start, i, &i);
+			simple_cmd(av, start, i, &i, ep);
 	}
     return (SUCCESS);
 }
