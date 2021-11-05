@@ -108,7 +108,7 @@ int     pipeline_cmd(char **av, int start_of_pipe, int end_of_pipe, int *i_ptr, 
 	close(fds[0]);
 	restore_std(std_bckp);
 	wait_all_pids(pids, cmds_n);
-	// free(pids);
+	free(pids);
 	(*i_ptr)++;
 	return (SUCCESS);
 }
