@@ -2,7 +2,6 @@
 
 int main(int ac, char *av[], char *ep[])
 {
-    (void)ep;
 	int	i;
 	int	start;
 

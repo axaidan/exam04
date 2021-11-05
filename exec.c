@@ -1,13 +1,6 @@
 #include "microshell.h"
 
-int     pipeline_cmd(char **av, int start, int end, int *i_ptr, char **ep)
-{
-	(void)ep;
-	replace_pipes(av, start, end);
-	display_pipeline(av, start, end);
-	(*i_ptr)++;
-	return (SUCCESS);
-}	
+
 
 int		exec_simple(char **av, char **ep)	
 {
@@ -33,7 +26,7 @@ int     simple_cmd(char **av, int start, int end, int *i_ptr, char **ep)
 {
 	(void)end;
 //	display_simple(av, start, end);
-//	if (strcmp(*(av + start), "cd" == 0)
+//	if (strcmp(*(av + start), "cd") == 0)
 //	exec_cd(av);
 //	else
 	exec_simple(av + start, ep);
